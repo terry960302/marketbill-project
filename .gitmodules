@@ -1,0 +1,9 @@
+[submodule "core-graphql-server"]
+	path = core-graphql-server
+	url = https://github.com/terry960302/marketbill-core-server.git
+[submodule "scheduler-services"]
+	path = scheduler-services
+	url = https://github.com/terry960302/marketbill-scheduler-service.git
+[submodule "messaging-service"]
+	path = messaging-service
+	url = https://github.com/terry960302/marketbill-messaging-service.git
