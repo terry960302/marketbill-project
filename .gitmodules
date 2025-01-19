@@ -7,3 +7,6 @@
 [submodule "messaging-service"]
 	path = messaging-service
 	url = https://github.com/terry960302/marketbill-messaging-service.git
+[submodule "receipt-process-service"]
+	path = receipt-process-service
+	url = https://github.com/terry960302/marketbill-file-process-service.git
