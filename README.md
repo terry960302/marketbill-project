@@ -32,23 +32,35 @@
 ## What We Built
 MarketBill의 백엔드는 마이크로서비스 아키텍처를 기반으로 4개의 독립적인 서비스로 구성되어 있습니다. 각 서비스는 특정 비즈니스 도메인에 집중하여 확장성과 유지보수성을 높였습니다.
 
-#### `Core GraphQL Server`
+#### `Core GraphQL Server(Java/SpringBoot)`
 중앙 API 서버로서 클라이언트의 모든 요청을 처리합니다. GraphQL을 도입하여 효율적인 데이터 요청과 응답을 구현했습니다.
 
-#### `Receipt Processing Service`
+#### `Receipt Processing Service(Python/FastAPI)`
 - 핵심 비즈니스 로직인 영수증 PDF 처리를 담당
 - 메인 API 서버에서 분리하여 시스템 부하 분산
 - 대용량 PDF File I/O처리에 최적화된 독립 서비스
 
-#### `Messaging Service`
+#### `Messaging Service(Golang/Echo)`
 SMS 발송을 전담하는 독립 서비스로, 알림 시스템의 안정성과 확장성을 보장합니다.
 
-#### `Scheduler Service`
+#### `Scheduler Service(Golang/Echo)`
 - 화훼 공식 사이트의 실시간 경매 정보 수집
 - 정기적인 데이터 동기화 및 벌크 업로드 처리
 - 외부 시스템과의 안정적인 데이터 통합 관리
 
-## CI/CD Pipeline
+## Tech Stack
+- Language: Java 18.0.1.1, Python 3.8.3, Go 1.18.3
+- Framework: Spring Boot 2.7.5, Netflix DGS(graphql), FastAPI,  
+- Database: Postgresql
+- Infrastructure: AWS(ECS, Lambda, CodeBuild, Code Pipeline, ECR, API gateway, Event Bridge)
+
+## Key Features
+- 소매상/도매상은 화훼 경매 데이터를 연동하여 실제 화훼 시장에서 거래되는 꽃정보 확인이 가능합니다.
+- 소매상(플로리스트)는 도매상을 정하여 꽃에 대하여 '장바구니 > 주문'이 가능합니다.
+- 도매상은 그날 들어온 주문을 합산하여 거래 명세서를 발급할 수 있습니다.
+- 소매상은 도매상과 비즈니스 관계를 맺을 수 있습니다.
+
+## CI/CD Pipeline(AWS)
 
 ### 배포 자동화 파이프라인 CD
 <div align="center">
@@ -64,11 +76,4 @@ SMS 발송을 전담하는 독립 서비스로, 알림 시스템의 안정성과
        width="800"/>
 </div>
 
-## Tech Stack
-- Language: Java 18.0.1.1, Python 3.8.3, Go 1.18.3
-- Framework: Spring Boot 2.7.5, Netflix DGS(graphql), FastAPI,  
-- Database: Postgresql
-- Infrastructure: AWS(ECS, Lambda, CodeBuild, Code Pipeline, ECR, API gateway, Event Bridge)
 
-## Key Features
-[주요 기능들과 기술적 챌린지를 다룬 내용 추가 예정]
