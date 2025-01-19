@@ -7,8 +7,8 @@
 # marketbill-project(BACKEND)
 <div align="center">
   <section>
-    <img src="https://github.com/user-attachments/assets/d713f402-220d-49b6-aaa9-a989857938a1" width="140" alt="두 번째 이미지"/>
-    <img src="https://github.com/user-attachments/assets/b294c293-3ac4-4e8a-b8f7-fb801ae56a06" width="700" alt="첫 번째 이미지"/>
+    <img src="https://github.com/user-attachments/assets/d713f402-220d-49b6-aaa9-a989857938a1" width="115" alt="두 번째 이미지"/>
+    <img src="https://github.com/user-attachments/assets/b294c293-3ac4-4e8a-b8f7-fb801ae56a06" width="600" alt="첫 번째 이미지"/>
   </section>
 </div>
 
