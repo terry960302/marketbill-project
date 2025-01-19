@@ -55,6 +55,9 @@ SMS 발송을 전담하는 독립 서비스로, 알림 시스템의 안정성과
 - Database: Postgresql
 - Infrastructure: AWS(ECS, Lambda, CodeBuild, Code Pipeline, ECR, API gateway, Event Bridge)
 
+## ERD
+![Image](https://github.com/user-attachments/assets/7c172053-9581-461d-b742-c3f653339822)
+
 ## Key Features
 - 소매상/도매상은 화훼 경매 데이터를 연동하여 실제 화훼 시장에서 거래되는 꽃정보 확인이 가능합니다.
 - 소매상(플로리스트)는 도매상을 정하여 꽃에 대하여 '장바구니 > 주문'이 가능합니다.
